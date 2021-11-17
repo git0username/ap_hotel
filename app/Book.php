@@ -8,7 +8,7 @@ class Book extends Model
 {
     protected $primaryKey = 'bookid';
 
-    protected $guarded = array('bookid)');
+    protected $guarded = array('bookid');
     public static $rules = array(
         'userid'=> 'required',
         'number'=> 'required',

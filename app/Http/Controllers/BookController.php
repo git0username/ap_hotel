@@ -26,9 +26,9 @@ class BookController extends Controller
 
     public function  booking_list(Request $request)
     {
-        // $items = User::all();
-        // return view('Book.booking_list',['items'=>$items]);
-        return view('Book.booking_list');
+        $items = Book::all();
+        return view('Book.booking_list',['items'=>$items]);
+        // return view('Book.booking_list');
 
     }       
 

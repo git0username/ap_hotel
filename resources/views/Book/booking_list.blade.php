@@ -66,12 +66,18 @@
     <body>
         <p>予約一覧表</p>        
             <table>                   
-            <tr><th>name: </th><th>address: </th></tr>
+            <tr><th>bookid</th><th>userid</th><th>number</th><th>check-in</th><th>check-out</th></tr>
 
             @foreach($items as $item)    
-            <tr><td>{{$item->bookid}}</td></tr>
-            <!-- <tr><td>{{$address}}</td></tr>
-            <tr><<td>{{$tel}}</td></tr>          -->
+            <tr>
+            <td>{{$item->bookid}}</td>
+            <td>{{$item->userid}}</td>
+            <td>{{$item->number}}</td>
+            <td>{{$item->check_in}}</td>
+            <td>{{$item->check_out}}</td>
+            <td>{{$item->user->name}}</td>
+            </tr>
+         
             
             @endforeach
             </table>
