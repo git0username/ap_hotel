@@ -78,7 +78,7 @@
     <body>
         <p>予約一覧表</p>        
             <table>                   
-            <tr><th>bookid</th><th>userid</th><th>name</th><th>address</th><th>tel</th><th>number</th><th>check-in</th><th>check-out</th></tr>
+            <tr><th>statement_ID</th><th>userid</th><th>name</th><th>address</th><th>tel</th><th>number</th><th>check-in</th><th>check-out</th></tr>
 
             @foreach($items as $item)    
             <tr>
@@ -86,10 +86,15 @@
             <td>{{$item->userid}}</td>
             <td>{{$item->user->name}}</td>
             <td>{{$item->user->address}}</td>
-            <td>{{$item->user->tel}}</td>
+            <td>{{$item->user->tel}}</td> 
             <td>{{$item->number}}</td>
             <td>{{$item->check_in}}</td>
             <td>{{$item->check_out}}</td>
+            {{-- <td>{{$item->room->statement_ID}}</td>
+            <td>{{$item->room->book_ID}}</td>
+            <td>{{$item->room->roomtype}}</td>
+            <td>{{$item->room->stays}}</td>
+            <td>{{$item->room->fee}}</td> --}}
             
             </tr>
          

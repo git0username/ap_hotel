@@ -9,7 +9,7 @@ class User extends Model
 
     protected $primaryKey = 'userid';
 
-    protected $guarded = array('userid)');
+    protected $guarded = array('userid');
     public static $rules = array(
         'name'=> 'required',
         'address'=> 'required',

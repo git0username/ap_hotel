@@ -28,9 +28,13 @@ class BookController extends Controller
     {
         $items = Book::all();
         return view('Book.booking_list',['items'=>$items]);
-        // return view('Book.booking_list');
-
-    }       
+    }
+    
+    public function  resv_details(Request $request)
+    {
+        $items = Book::all();
+        return view('Book.resv_details',['items'=>$items]);
+    }
 
     
     // public function seach(Request $request)

@@ -68,16 +68,15 @@
         <form action="/Book/book" method="post">
             <table>
             @csrf
-            <tr><th>userid: </th><td><input type="text" name="name" value="{{old('name')}}"></td></tr>
+            <tr><th>userid: </th><td><input type="text" name="userid" value="{{old('name')}}"></td></tr>
             
             {{-- <tr><th>roomtype: </th><td><input type="text" name="roomtype" value="{{old('roomtype')}}"></td></tr> --}}
 
             <tr><th>number: </th><td><input type="text" name="number" value="{{old('number')}}"></td></tr>
-            <tr><th>check-in: </th><td><input type="text" name="check-in" value="{{old('check-in')}}"></td></tr>
+            <tr><th>check_in: </th><td><input type="text" name="check_in" value="{{old('check_in')}}"></td></tr>
             <tr><th></th><td>
-            <tr><th>check-out: </th><td><input type="text" name="check-out" value="{{old('check-out')}}"></td></tr>
-            <tr><th></th><td>
-            <input type="submit" value="send"></td></tr>
+            <tr><th>check_out: </th><td><input type="text" name="check_out" value="{{old('check_out')}}"></td></tr>
+            <tr><th></th><td><input type="submit" value="send"></td></tr>
             </table>
         </form>
     </body>

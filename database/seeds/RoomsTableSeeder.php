@@ -13,27 +13,27 @@ class RoomsTableSeeder extends Seeder
     public function run()
     {
         $param=[
-            'roomtype_ID'=>1,
+            'roomtype'=>'和室',
             'room_Number'=>101,            
         ];
-        DB::table('Rooms')->insert($param);
+        DB::table('rooms')->insert($param);
 
         $param=[
-            'roomtype_ID'=>2,
+            'roomtype'=>'和室大',
             'room_Number'=>201,            
         ];
-        DB::table('Rooms')->insert($param);
+        DB::table('rooms')->insert($param);
 
         $param=[
-            'roomtype_ID'=>3,
+            'roomtype'=>'洋室',
             'room_Number'=>301,            
         ];
-        DB::table('Rooms')->insert($param);
+        DB::table('rooms')->insert($param);
 
         $param=[
-            'roomtype_ID'=>4,
+            'roomtype'=>'洋室大',
             'room_Number'=>401,            
         ];
-        DB::table('Rooms')->insert($param);
+        DB::table('rooms')->insert($param);
     }
 }

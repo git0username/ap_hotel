@@ -16,24 +16,24 @@ class RoomtypesTableSeeder extends Seeder
             'type'=>'和室',
             'number_of_capacity'=>4,            
         ];
-        DB::table('RoomTypes')->insert($param);
+        DB::table('roomTypes')->insert($param);
 
         $param=[
             'type'=>'和室大',
             'number_of_capacity'=>8,            
         ];
-        DB::table('RoomTypes')->insert($param);
+        DB::table('roomTypes')->insert($param);
 
         $param=[
             'type'=>'洋室',
             'number_of_capacity'=>4,            
         ];
-        DB::table('RoomTypes')->insert($param);
+        DB::table('roomTypes')->insert($param);
 
         $param=[
             'type'=>'洋室大',
             'number_of_capacity'=>8,            
         ];
-        DB::table('RoomTypes')->insert($param);
+        DB::table('roomTypes')->insert($param);
     }
 }

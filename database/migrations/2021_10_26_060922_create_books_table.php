@@ -17,8 +17,8 @@ class CreateBooksTable extends Migration
             $table->bigIncrements('bookid');
             $table->integer('userid');
             $table->integer('number');
-            $table->date('check-in');
-            $table->date('check-out');
+            $table->date('check_in');
+            $table->date('check_out');
             $table->timestamps();
         });
     }

@@ -66,9 +66,10 @@
     <body>
         <p>お客様登録完了</p>       
             <table>           
-            <tr><th>name: </th><td>{{$name}}</td></tr>
-            <tr><th>address: </th><td>{{$address}}</td></tr>
-            <tr><th>tel: </th><td>{{$tel}}</td></tr>
+            <tr><th>userid: </th><td>{{$userid}}</td></tr>
+            <tr><th>number: </th><td>{{$number}}</td></tr>
+            <tr><th>check_in: </th><td>{{$check_in}}</td></tr>
+            <tr><th>check_out: </th><td>{{$check_out}}</td></tr>
             <tr><th></th><td>           
             </table>
         </form>
