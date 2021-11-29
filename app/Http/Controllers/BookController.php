@@ -26,9 +26,17 @@ class BookController extends Controller
 
     public function  booking_list(Request $request)
     {
-        $items = Book::all();
+        $name = User::where('name',$request->name)->get(); //whereでuserIdをとってくる
+        // $param = ['name'=> $request->name, 'item'=>$name];
+        $items = Book::all(); //userIdが一致するものだけをとってくる
         return view('Book.booking_list',['items'=>$items]);
     }
+
+    // public function  booking_list(Request $request)
+    // {
+    //     $items = Book::all();
+    //     return view('Book.booking_list',['items'=>$items]);
+    // }
     
     public function  resv_details(Request $request)
     {

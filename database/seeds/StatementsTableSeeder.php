@@ -14,7 +14,7 @@ class StatementsTableSeeder extends Seeder
     {
         $param=[
             'book_ID'=>1,
-            'roomtype'=>'和室',
+            'room_ID'=>1,
             'stays'=>2,
             'fee'=>5000,             
         ];
@@ -23,7 +23,7 @@ class StatementsTableSeeder extends Seeder
         
         $param=[
             'book_ID'=>2,
-            'roomtype'=>'和室大',
+            'room_ID'=>2,
             'stays'=>3,
             'fee'=>7000,             
         ];
@@ -31,7 +31,7 @@ class StatementsTableSeeder extends Seeder
 
         $param=[
             'book_ID'=>3,
-            'roomtype'=>'洋室',
+            'room_ID'=>3,
             'stays'=>4,
             'fee'=>9000,             
         ];
@@ -39,7 +39,7 @@ class StatementsTableSeeder extends Seeder
 
         $param=[
             'book_ID'=>4,
-            'roomtype'=>'洋室大',
+            'room_ID'=>4,
             'stays'=>5,
             'fee'=>1000,             
         ];

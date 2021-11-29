@@ -17,6 +17,11 @@ Route::get('/', function () {
 
 Route::get('User','UserController@index');
 
+Route::get('User/login','UserController@login');
+Route::post('User/login','UserController@login_search');
+
+Route::post('User/personal_booking_list','BookController@booking_list');
+
 
 Route::get('User/add','UserController@add');
 Route::post('User/add','UserController@create');

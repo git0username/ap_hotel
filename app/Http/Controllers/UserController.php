@@ -13,6 +13,16 @@ class UserController extends Controller
         return view('User.index');
     }
 
+    public function login(Request $request){
+        return view('User.login');
+    }
+
+    public function login_search(Request $request){
+        $item = User::where('userid',$request->userid)->get();
+        $param = ['userid'=> $request->userid, 'item'=>$item];
+        return view('User.personal',$param);
+    }
+
 
     public function add(Request $request){
         return view('User.add');

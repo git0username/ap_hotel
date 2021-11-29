@@ -14,6 +14,7 @@ class User extends Model
         'name'=> 'required',
         'address'=> 'required',
         'tel'=>'required',
+        // 'password'=>'required',
     );
 
 }

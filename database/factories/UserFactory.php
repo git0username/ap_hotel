@@ -10,5 +10,6 @@ $factory->define(App\User::class, function (Faker $faker) {
         'name' => $faker->name(),
         'address'=>substr($faker->address(),7),
         'tel'=>$faker->phoneNumber(),
+        'pass'=>111,
     ];
 });

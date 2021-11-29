@@ -16,7 +16,7 @@ class CreatStatementsTable extends Migration
         Schema::create('statements', function (Blueprint $table) {
             $table->bigIncrements('statement_ID');
             $table->integer('book_ID');
-            $table->string('roomtype');
+            $table->integer('room_ID');
             $table->integer('stays');
             $table->integer('fee');
             $table->timestamps();
