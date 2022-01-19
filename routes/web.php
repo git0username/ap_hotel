@@ -28,6 +28,7 @@ Route::post('User/add','UserController@create');
 
 Route::get('Book/book','BookController@book');
 Route::post('Book/book','BookController@create');
+
 Route::get('Book/booking_list','BookController@booking_list');
 Route::get('Book/resv_details','BookController@resv_details');
 

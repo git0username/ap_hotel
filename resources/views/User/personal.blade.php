@@ -13,7 +13,7 @@
 @section('login_name')
 
 
-    <p>ログイン中：{{ $userid }} {{ $item }}様</p>
+    <p>ログイン中：userID:{{ $userid }} 登録名:{{ $item->first()->name }} 様 {{ $item}}</p>
 
     {{-- <ul class="main-nav">
         <li><a href="/Book/book">宿泊予約ページ</a></li>

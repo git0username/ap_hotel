@@ -10,8 +10,23 @@ class BookController extends Controller
 {
     public function book(Request $request)
     {
-         
-        return view('Book.book');
+        //  $userdata = $request->session()->get('userid');
+        //  $userdata1 = $request->session()->get('name');
+        $userdata = $request->session()->get('userdata');        
+
+
+        //  $userdata = $request->session()->all();
+
+
+         $date_min = \Carbon\Carbon::now()->format("Y-m-d");
+         $date_max = \Carbon\Carbon::now()->addYears(1)->format("Y-m-d");
+
+        return view('Book.book',['userdata'=>$userdata,'datemin'=>$date_min,'datemax'=>$date_max]);
+
+        
+         //sessionを継続させる
+
+        // return view('Book.book',['userdata'=>$userdata]);
     }
 
     public function create(Request $request)
@@ -21,6 +36,9 @@ class BookController extends Controller
         $form = $request->all();
         unset($form['_token']);
         $book->fill($form)->save();
+
+        // $userdata = $request->session()->get('userdata');session持続させる
+
         return view('Book.bookconfirm', $form);
     }
 

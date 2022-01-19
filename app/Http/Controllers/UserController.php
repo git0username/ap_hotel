@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 
+
 class UserController extends Controller
 {
 
@@ -18,9 +19,22 @@ class UserController extends Controller
     }
 
     public function login_search(Request $request){
+        
         $item = User::where('userid',$request->userid)->get();
+            if($item->isEmpty()){
+            return view('User.login_fail');
+        }else{
+            $userdata = collect(['userid'=>$request->userid,'name'=>$item->first()->name]);
+            $request->session()->put('userdata',$userdata);
+
+        // $request->session()->put(['userid'=>$request->userid,'name'=>$item->first()->name]);
+
+        // $request->session()->put('userdata',$item->first()->name);
+
         $param = ['userid'=> $request->userid, 'item'=>$item];
+        
         return view('User.personal',$param);
+        }
     }
 
 
